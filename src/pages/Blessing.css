@@ -1,0 +1,107 @@
+.blessing-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.blessing-card {
+  max-width: 1200px;
+  width: 100%;
+  animation: fadeIn 1s ease-in;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.blessing-content {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  color: #333;
+}
+
+.blessing-media {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-in forwards;
+  opacity: 0;
+  animation-delay: 0.8s;
+}
+
+.blessing-content p {
+  margin: 1em 0;
+  animation: slideUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.blessing-content p:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.blessing-content p:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.blessing-content p:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .blessing-card {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 992px) {
+  .blessing-card {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blessing-content {
+    font-size: 1rem;
+  }
+  
+  .blessing-card {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .blessing-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blessing-content {
+    font-size: 0.9rem;
+  }
+}
